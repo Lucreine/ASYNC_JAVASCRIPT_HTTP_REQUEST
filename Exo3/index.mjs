@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 
 const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-const authToken = 'your_jwt_token_here'; 
+const authToken = 'our_token'; 
 const fetchOptions = {
     method: 'GET',
     headers: {
