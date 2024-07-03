@@ -13,8 +13,13 @@ function App() {
     const fetchUsers = async () => {
       const response = await fetch('http://localhost:4000/users');
       const data = await response.json();
-      // console.log('Data from API:', data); // Vérifie les données dans la console
-      setUsers(data);
+      console.log('Data from API:', data); // Vérifie les données dans la console
+      setUsers(data.results);
+      // if (Array.isArray(data.results)) {
+      //   setUsers(data.results);
+      // } else {
+      //   console.error('Data is not an array:', data);
+      // }
     };
 
     fetchUsers();
